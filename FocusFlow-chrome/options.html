@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+        <title>FocusFlow Settings</title>
+        <style>
+            body {
+                width: 1000px;
+                margin: 20px auto;
+                background-color: #0e0e0e;
+            }
+            h1 {
+                font-family: "Averia Serif Libre";
+                font-size: 36px;
+                font-weight: bold;
+                color: #e0e0a0;
+                text-align: center;
+            }
+            h2 {
+                font-family: "Averia Serif Libre";
+                font-size: 27px;
+                color: #e0e0a0;
+                text-align: left;
+            }
+            h3 {
+                font-family: "Bricolage Grotesque";
+                font-size: 20px;
+                color: #e0e0a0;
+                text-align: left;
+            }
+            p {
+                font-family: "Bricolage Grotesque";
+                font-size: 14px;
+                color: white;
+                text-align: left;
+                margin-top: -10px;
+            }
+            .container {
+                border: 2px solid #e0e0a0;
+                padding: 20px;
+                border-radius: 8px;
+                margin-bottom: 25px;
+            }
+            label {
+                font-family: "Bricolage Grotesque";
+                font-size: 14px;
+                font-weight: bold;
+                color: #ffffff;
+                display: block;
+                margin-bottom: 5px;
+                margin-top: -10px;
+            }
+            input[type="number"],
+            textarea {
+                width: 95%;
+                padding: 8px;
+                margin-bottom: 15px;
+                color: white;
+                border: 1px solid #e0e0a0;
+                border-radius: 4px;
+                background-color: #3a3a3a;
+            }
+            textarea {
+                height: 100px;
+                resize: vertical;
+            }
+            button {
+                font-family: "Bricolage Grotesque";
+                font-size: 14px;
+                font-weight: bold;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                display: block;
+                margin: 0 auto;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            #status {
+                text-align: center;
+                margin-top: 10px;
+                color: green;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>FocusFlow Settings</h1>
+
+        <div class="container">
+            <h2>Global Settings</h2>
+            <label for="time-limit"
+                >Daily Time Limit for Blocked Sites (minutes):</label
+            >
+            <input type="number" id="time-limit" min="1" />
+        </div>
+
+        <div class="container">
+            <h2>Mode Configuration</h2>
+            <p>Enter one website domain per line (e.g., instagram.com)</p>
+
+            <h3>Work Mode</h3>
+            <label for="work-blocked">Blocked Sites:</label>
+            <textarea id="work-blocked"></textarea>
+
+            <h3>Study Mode</h3>
+            <label for="study-blocked">Blocked Sites:</label>
+            <textarea id="study-blocked"></textarea>
+
+            <h3>Focus Mode</h3>
+            <label for="focus-allowed"
+                >Allowed Sites (all others will be blocked):</label
+            >
+            <textarea id="focus-allowed"></textarea>
+        </div>
+
+        <button id="save">Save Settings</button>
+        <div id="status"></div>
+
+        <script src="js/options.js"></script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+        <title>FocusFlow</title>
+        <style>
+            body {
+                background-color: #3a3a3a;
+                width: 250px;
+                padding: 20px;
+                border-radius: 30px;
+                border: 2px solid #e0e0a0;
+            }
+            h1 {
+                color: #e0e0a0;
+                font-family: "Averia Serif Libre", serif;
+                font-weight: 900;
+                font-size: 28px;
+                text-align: center;
+                margin: 0 0 15px;
+            }
+            .row {
+                font-family: "Bricolage Grotesque", sans-serif;
+                font-weight: 600;
+                font-size: 15px;
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            label {
+                font-weight: bold;
+            }
+            select {
+                border-radius: 40px;
+                border: 1px solid #e0e0a0;
+                color: #e0e0a0;
+                padding: 5px;
+                width: 190px;
+                background-color: #3a3a3a;
+            }
+            .timer {
+                font-size: 16px;
+            }
+            .options-link {
+                text-align: center;
+                margin-top: 15px;
+            }
+            a {
+                color: #00afff;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>FocusFlow</h1>
+        <div class="row">
+            <label for="mode-select">Mode:</label>
+            <select id="mode-select">
+                <option value="off">Off</option>
+                <!-- Modes will be populated by JS -->
+            </select>
+        </div>
+        <div class="row">
+            <label>Time on Distractions:</label>
+            <span class="timer"><span id="time-spent">0</span> min</span>
+        </div>
+        <div class="options-link">
+            <a href="#" id="options-link">Settings</a>
+        </div>
+        <script src="js/popup.js"></script>
+    </body>
+</html>
